@@ -1,0 +1,28 @@
+{
+  "name": "express-webpack-example",
+  "version": "0.0.1",
+  "description": "Repo showing how to bundle an express.js application to a bundle with webpack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "webpack",
+    "dev": "webpack --config build/dev.config",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CorpGlory/express-webpack-example.git"
+  },
+  "keywords": [
+    "node.js",
+    "webpack",
+    "express.js",
+    "javascript"
+  ],
+  "author": "CorpGlory Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CorpGlory/express-webpack-example/issues"
+  },
+  "homepage": "https://github.com/CorpGlory/express-webpack-example#readme"
+}
