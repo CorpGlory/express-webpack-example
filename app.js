@@ -1,6 +1,7 @@
 import { MODULE_CONST } from './test_module'
 
-var express = require('express');
+import * as express from 'express'
+
 var app = express();
 
 app.get('/', function(req, res) {
