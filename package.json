@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node dist/server.js",
-    "build": "webpack",
-    "dev": "webpack --config build/dev.config",
+    "build": "webpack --config build/webpack.prod.conf.js",
+    "dev": "webpack --config build/webpack.dev.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/CorpGlory/express-webpack-example#readme",
   "devDependencies": {
     "express": "^4.17.1",
-    "webpack": "^4.39.1"
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }
