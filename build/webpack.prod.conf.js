@@ -13,5 +13,8 @@ base.plugins = [
     }
   )
 ]
+base.stats = {
+  warningsFilter: /require\.extensions/
+}
 
 module.exports = base;
