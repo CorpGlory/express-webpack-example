@@ -1,31 +1,32 @@
 const base = require('./webpack.base.conf');
 const webpack = require('webpack')
+const path = require('path')
+
+
+function resolve(p) {
+  return path.resolve(__dirname, './../', p);
+}
 
 
 base.mode = 'development';
 base.externals = [
   function(context, request, callback) {
-    
-    if(request.toString() === './view') {
-      console.log('context: ', context)
-      console.log('request: ', request.toString())
-    }
-
-    // if(request[0] == '.') {
+    if(request[0] == '.') {
       callback();
-    // } else {
-    //   callback(null, "require('" + request + "')");
-    // }
+    } else {
+      callback(null, "require('" + request + "')");
+    }
   }
 ]
 
-base.plugins = [
-  new webpack.ContextReplacementPlugin(
-    /\.\/node_modules\/express\/lib sync recursive/,
-    // Regular expression to match the files
-    // that should be imported
-    /ejs/
-  )
-]
+// base.plugins = [
+//   new webpack.ContextReplacementPlugin(
+//     /express\/lib/,
+//     resolve('node_modules'),
+//     {
+//       'ejs': 'lodash'
+//     }
+//   )
+// ]
 
 module.exports = base;
