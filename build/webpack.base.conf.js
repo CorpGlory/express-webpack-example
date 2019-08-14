@@ -1,9 +1,5 @@
-const path = require('path');
+const resolve = require('path').resolve
 
-
-function resolve(p) {
-  return path.resolve(__dirname, './../', p);
-}
 
 module.exports = {
   target: 'node',
@@ -14,6 +10,6 @@ module.exports = {
   entry: [ './app.js' ],
   output: {
     filename: "app.js",
-    path: resolve('dist')
-  },
+    path: resolve(__dirname, './../dist')
+  }
 }

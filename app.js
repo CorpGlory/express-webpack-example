@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', resolve(__dirname, '..'));
 
 app.get('/', function(req, res) {
-   res.send("Hello world!");
+  res.send("Hello world!");
 });
 
 app.get('/test-module', function(req, res) {

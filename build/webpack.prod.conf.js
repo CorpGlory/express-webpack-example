@@ -1,18 +1,17 @@
-var base = require('./webpack.base.conf');
+const base = require('./webpack.base.conf');
+const webpack = require('webpack')
+const resolve = require('path').resolve
+
 
 base.mode = 'production';
-base.externals = [
-  function(context, request, callback) {
-
-    if(request.toString === './view') {
-      console.log('context: ', context)
-      console.log('request: ', request.toString())
+base.plugins = [
+  new webpack.ContextReplacementPlugin(
+    /express\/lib/,
+    resolve(__dirname, '../node_modules'),
+    {
+      'ejs': 'ejs'
     }
-    
-    //callback(null, "require('" + request + "')");
-    callback();
-    
-  }
-],
+  )
+]
 
 module.exports = base;
