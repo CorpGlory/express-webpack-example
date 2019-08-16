@@ -2,6 +2,8 @@
 Repo showing how to bundle an [Express.js](https://github.com/expressjs/express)
 application to a bundle with [Webpack](https://github.com/webpack/webpack).
 
+**Read more about the project on [https://corpglory.com/s/express-webpack/](https://corpglory.com/s/express-webpack/)**
+
 Project has production and development build.
 
 ## Production build
