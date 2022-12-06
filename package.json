@@ -27,7 +27,7 @@
   "homepage": "https://github.com/CorpGlory/express-webpack-example#readme",
   "devDependencies": {
     "ejs": "^2.6.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6"
   }
